@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página - ASIC2 - Ivan.C</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            width: 90%;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        h1 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            color: #ffcc00;
+            margin: 25px 0 10px;
+            border-bottom: 2px solid rgba(255, 204, 0, 0.5);
+            padding-bottom: 5px;
+        }
+        
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .info-box {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: #80ffdb;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(255, 204, 0, 0.2);
+            color: #ffcc00;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin: 5px;
+            border: 1px solid rgba(255, 204, 0, 0.3);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                width: 95%;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Hola! Soy Ivan.C</h1>
+        
+        <!-- Foto de perfil (opcional) -->
+        <div style="text-align: center; margin: 20px 0;">
+            <img src="https://avatars.githubusercontent.com/u/176121709?v=4" 
+                 alt="Foto de perfil de Ivan.C" 
+                 width="150" 
+                 style="border-radius: 50%; border: 4px solid white;">
+        </div>
+        
+        <div class="info-box">
+            <p>Soy <strong>estudiante de ASIC2</strong> en IES El Calamot. Esta es mi página web personal creada para la asignatura donde estamos aprendiendo desarrollo web y control de versiones con Git y GitHub.</p>
+            <p>Me interesa la programación y la tecnología, y estoy emocionado de aprender a crear sitios web desde cero.</p>
+        </div>
+        
+        <h2>📚 Mis Intereses</h2>
+        <p>Áreas que me interesan y en las que quiero aprender más:</p>
+        <ul>
+            <li>Desarrollo web y diseño frontend</li>
+            <li>Control de versiones con Git y GitHub</li>
+            <li>Tecnologías web modernas</li>
+            <li>Optimización y buenas prácticas de código</li>
+            <li>Aplicaciones web interactivas</li>
+        </ul>
+        
+        <h2>🛠️ Tecnologías que estoy aprendiendo</h2>
+        <p>
+            <span class="badge">HTML5</span>
+            <span class="badge">CSS3</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">Git</span>
+            <span class="badge">GitHub</span>
+            <span class="badge">VS Code</span>
+            <span class="badge">GitHub Pages</span>
+        </p>
+        
+        <h2>🔗 Enlaces importantes</h2>
+        <p>• <a href="https://github.com/cserrano-calamot/asic2-2026" target="_blank">Repositorio de ejemplo de la clase</a></p>
+        <p>• <a href="https://github.com/Ivan-7777/asic2-2026" target="_blank">Mi repositorio en GitHub</a></p>
+        <p>• <a href="https://github.com/Ivan-7777" target="_blank">Mi perfil de GitHub</a></p>
+        <p>• <a href="https://ivan-7777.github.io/asic2-2026/" target="_blank">Mi página publicada en GitHub Pages</a></p>
+        
+        <div class="footer">
+            <p>📍 Estudiante de ASIC2 - IES El Calamot</p>
+            <p>✉️ Contacto: ivan.calvo.gonzalez@ieselcalamot.com</p>
+            <p>📅 Página creada el <span id="fecha"></span> | Última actualización: <span id="actualizacion"></span></p>
+        </div>
+    </div>
+    
+    <script>
+        // Fecha actual automática
+        const hoy = new Date();
+        const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('fecha').textContent = hoy.toLocaleDateString('es-ES', opciones);
+        document.getElementById('actualizacion').textContent = hoy.toLocaleDateString('es-ES');
+        
+        // Efecto interactivo simple
+        document.querySelectorAll('.badge').forEach(badge => {
+            badge.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+                this.style.transition = 'transform 0.2s';
+            });
+            badge.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+        
+        // Confirmación de visita
+        console.log('¡Bienvenido a la página de Ivan.C para ASIC2!');
+    </script>
+</body>
+</html>
