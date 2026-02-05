@@ -1,1 +1,1 @@
-# Repositori de prova per ASIC2
+# GitHub remot d'ASIC2 per a proves
